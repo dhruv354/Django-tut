@@ -6,3 +6,11 @@ from django.http import HttpResponse
 
 def home(request):
     return render(request, 'index.html')
+
+def add(request):
+    print('printing request object')
+    # print(type(request))
+    num1 = int(request.GET.get('num1'))
+    num2 = int(request.GET.get('num2'))
+    output = num1 + num2
+    return render(request, 'add.html', {'result': output})
