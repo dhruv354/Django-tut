@@ -10,7 +10,7 @@ def home(request):
 def add(request):
     print('printing request object')
     # print(type(request))
-    num1 = int(request.GET.get('num1'))
-    num2 = int(request.GET.get('num2'))
+    num1 = int(request.POST.get('num1'))
+    num2 = int(request.POST.get('num2'))
     output = num1 + num2
     return render(request, 'add.html', {'result': output})

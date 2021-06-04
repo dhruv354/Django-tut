@@ -3,7 +3,7 @@
 {% block body %}
 
 <h1>Hello dhruv</h1>
-<form action='/add' method='get'>
+<form action='/add' method='post'>
     {% csrf_token %} 
    Enter 1st Number:  <input type='text' name='num1' /><br />
    Enter 2nd Number:  <input type='text' name='num2' /><br />
