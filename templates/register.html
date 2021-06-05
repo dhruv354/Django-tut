@@ -27,5 +27,8 @@
             <input type='submit' />
          </form>
          <script src="" async defer></script>
+         {% for message in messages %}
+         <h1>{{message}} </h1>
+         {% endfor %}
     </body>
 </html>
